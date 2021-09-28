@@ -1,7 +1,12 @@
-import 'tailwindcss/tailwind.css'
+import { Fragment } from 'react';
+import Navbar from '../components/Layout/Navbar';
+import '../style/global.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return (
+    <Fragment>
+      <Navbar />
+      <Component {...pageProps} />
+    </Fragment>
+  );
 }
-
-export default MyApp
